@@ -4,5 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-   has_many :own_photos, class_name:"Photo",foreign_key: "owner_id"     
+   has_many :own_photos, class_name:"Photo",foreign_key: "owner_id"
+   has_many :coments, foreign_key: "author_id"     
 end
