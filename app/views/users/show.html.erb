@@ -39,8 +39,10 @@
     <li class="list-group-item">A third item</li-->
   </ul>
   <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+  <!--%= render "comments/form", comment: Comment.new(photo_id: photo.id) %-->
+<%= render "comments/form", comment: photo.comments.build %>
+    <!--a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a-->
    </div>
  </div>
  </div>
