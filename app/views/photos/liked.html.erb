@@ -1,3 +1,4 @@
+<!--Liked photos-->
 
 
 <div class="row">
@@ -31,8 +32,9 @@
 
 </div>
 </div>
-<%= current_user.own_photos.count%>
+<%= current_user.liked_photos.count%>
 <!--h2>Own photos</h2-->
-<% current_user.own_photos.each do |zebra|%>
-<%= render "photos/photo", giraffe: zebra %>
+<% current_user.liked_photos.each do |photo|%>
+<%= render "photos/photo", giraffe: photo %>
+
 <% end %>
